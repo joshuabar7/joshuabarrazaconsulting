@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Preview — Navbar Logo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&family=Pinyon+Script&family=Sacramento&family=Tangerine:wght@700&family=Dancing+Script:wght@700&family=Libre+Baskerville:ital@1&family=Cormorant+Garamond:ital,wght@1,600&family=Playfair+Display:ital,wght@1,600&family=Lora:ital,wght@1,600&family=EB+Garamond:ital,wght@1,500&family=Cinzel:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0C1F14;
+      font-family: system-ui, sans-serif;
+      padding: 40px 32px;
+      color: white;
+    }
+    h1 {
+      font-family: system-ui;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 40px;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section headers */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.5);
+      margin-bottom: 20px;
+      margin-top: 48px;
+    }
+
+    /* Grid of preview pills */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #193522;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 9999px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      border-color: rgba(201,168,76,0.5);
+      box-shadow: 0 0 0 1px rgba(201,168,76,0.2);
+    }
+    .card .option-tag {
+      font-size: 10px;
+      font-family: 'IBM Plex Mono', monospace;
+      color: rgba(201,168,76,0.5);
+      min-width: 28px;
+    }
+    .circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #C9A84C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #0C1F14;
+    }
+    .name {
+      color: white;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .font-label {
+      margin-left: auto;
+      font-size: 10px;
+      color: rgba(255,255,255,0.2);
+      white-space: nowrap;
+      padding-left: 12px;
+    }
+
+    /* JB font classes */
+    .jb-great-vibes    { font-family: 'Great Vibes', cursive; font-size: 20px; padding-top: 3px; }
+    .jb-alex-brush     { font-family: 'Alex Brush', cursive; font-size: 20px; padding-top: 2px; }
+    .jb-pinyon         { font-family: 'Pinyon Script', cursive; font-size: 22px; padding-top: 2px; }
+    .jb-sacramento     { font-family: 'Sacramento', cursive; font-size: 18px; padding-top: 2px; }
+    .jb-tangerine      { font-family: 'Tangerine', cursive; font-size: 26px; font-weight: 700; padding-top: 2px; }
+    .jb-dancing        { font-family: 'Dancing Script', cursive; font-size: 18px; font-weight: 700; padding-top: 2px; }
+    .jb-cormorant      { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 17px; }
+    .jb-sans-bold      { font-family: system-ui, sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.05em; }
+
+    /* Name font classes */
+    .name-libre        { font-family: 'Libre Baskerville', serif; font-style: italic; }
+    .name-cormorant    { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 16px; }
+    .name-playfair     { font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; }
+    .name-lora         { font-family: 'Lora', serif; font-style: italic; }
+    .name-eb-garamond  { font-family: 'EB Garamond', serif; font-style: italic; font-size: 16px; }
+    .name-cinzel       { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.15em; }
+
+    hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 48px; }
+
+    .combo-section { margin-top: 48px; }
+    .combo-label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.5);
+      margin-bottom: 20px;
+    }
+    .combo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>// Navbar Logo — Font Preview</h1>
+  <p class="subtitle">Hover over any option. Pick your favorite "JB" style and "Joshua Barraza" style below, then tell me the numbers.</p>
+
+  <!-- JB OPTIONS -->
+  <p class="section-label">JB Monogram (inside gold circle) — pick one</p>
+  <div class="grid">
+
+    <div class="card">
+      <span class="option-tag">JB-1</span>
+      <div class="circle"><span class="jb-great-vibes">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Great Vibes</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">JB-2</span>
+      <div class="circle"><span class="jb-alex-brush">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Alex Brush</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">JB-3</span>
+      <div class="circle"><span class="jb-pinyon">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Pinyon Script</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">JB-4</span>
+      <div class="circle"><span class="jb-sacramento">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Sacramento</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">JB-5</span>
+      <div class="circle"><span class="jb-tangerine">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Tangerine Bold</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">JB-6</span>
+      <div class="circle"><span class="jb-dancing">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Dancing Script</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">JB-7</span>
+      <div class="circle"><span class="jb-cormorant">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Cormorant Italic</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">JB-8</span>
+      <div class="circle"><span class="jb-sans-bold">JB</span></div>
+      <span class="name" style="font-family:system-ui">Joshua Barraza</span>
+      <span class="font-label">Sans Bold (current)</span>
+    </div>
+
+  </div>
+
+  <!-- NAME OPTIONS -->
+  <p class="section-label" style="margin-top:48px">"Joshua Barraza" name text — pick one</p>
+  <div class="grid">
+
+    <div class="card">
+      <span class="option-tag">N-1</span>
+      <div class="circle"><span class="jb-cormorant">JB</span></div>
+      <span class="name name-libre">Joshua Barraza</span>
+      <span class="font-label">Libre Baskerville Italic</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">N-2</span>
+      <div class="circle"><span class="jb-cormorant">JB</span></div>
+      <span class="name name-cormorant">Joshua Barraza</span>
+      <span class="font-label">Cormorant Garamond Italic</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">N-3</span>
+      <div class="circle"><span class="jb-cormorant">JB</span></div>
+      <span class="name name-playfair">Joshua Barraza</span>
+      <span class="font-label">Playfair Display Italic</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">N-4</span>
+      <div class="circle"><span class="jb-cormorant">JB</span></div>
+      <span class="name name-lora">Joshua Barraza</span>
+      <span class="font-label">Lora Italic</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">N-5</span>
+      <div class="circle"><span class="jb-cormorant">JB</span></div>
+      <span class="name name-eb-garamond">Joshua Barraza</span>
+      <span class="font-label">EB Garamond Italic</span>
+    </div>
+
+    <div class="card">
+      <span class="option-tag">N-6</span>
+      <div class="circle"><span class="jb-cormorant">JB</span></div>
+      <span class="name name-cinzel">Joshua Barraza</span>
+      <span class="font-label">Cinzel (small caps)</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
