@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
+import Testimonials from './components/Testimonials'
 import AboutJoshua from './components/AboutJoshua'
 import Pricing from './components/Pricing'
 import Booking from './components/Booking'
@@ -12,6 +13,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <HowItWorks />
+      <Testimonials />
       <AboutJoshua />
       <Pricing />
       <Booking />
