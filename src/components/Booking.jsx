@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Calendar, Clock, CheckCircle2 } from 'lucide-react'
 import { SITE } from '../content'
+import { hasConsented } from './CookieConsent'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,6 +13,14 @@ const PERKS = booking.perks
 
 export default function Booking() {
   const containerRef = useRef(null)
+  const [calendlyReady, setCalendlyReady] = useState(hasConsented())
+
+  // Called by CookieConsent in App.jsx when user accepts
+  useEffect(() => {
+    function onConsent() { setCalendlyReady(true) }
+    window.addEventListener('jbc:consent-accepted', onConsent)
+    return () => window.removeEventListener('jbc:consent-accepted', onConsent)
+  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -27,14 +36,15 @@ export default function Booking() {
     return () => ctx.revert()
   }, [])
 
-  // Load Calendly script once
+  // Only load Calendly script after cookie consent — GDPR requirement
   useEffect(() => {
+    if (!calendlyReady) return
     if (document.querySelector('script[src*="calendly"]')) return
     const s = document.createElement('script')
     s.src = 'https://assets.calendly.com/assets/external/widget.js'
     s.async = true
     document.head.appendChild(s)
-  }, [])
+  }, [calendlyReady])
 
   return (
     <section ref={containerRef} id="book" className="bg-charcoal pt-28 pb-20 px-6 relative overflow-hidden">
@@ -93,14 +103,22 @@ export default function Booking() {
             </div>
           </div>
 
-          {/* Right - Calendly embed */}
+          {/* Right - Calendly embed (only loads after cookie consent) */}
           <div className="booking-right h-full">
-            <div
-              className="calendly-inline-widget w-full h-full rounded-3xl overflow-hidden border border-gold/15 shadow-2xl shadow-jet/60"
-              data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=193522&text_color=faf9f6&primary_color=C9A84C`}
-              data-resize="true"
-              style={{ minWidth: '320px', minHeight: '500px' }}
-            />
+            {calendlyReady ? (
+              <div
+                className="calendly-inline-widget w-full h-full rounded-3xl overflow-hidden border border-gold/15 shadow-2xl shadow-jet/60"
+                data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=193522&text_color=faf9f6&primary_color=C9A84C`}
+                data-resize="true"
+                style={{ minWidth: '320px', minHeight: '500px' }}
+              />
+            ) : (
+              <div className="w-full h-full rounded-3xl border border-gold/15 flex flex-col items-center justify-center gap-4 bg-white/3" style={{ minHeight: '500px' }}>
+                <p className="font-sans text-white/40 text-sm text-center px-6">
+                  Accept cookies to load the booking calendar.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
