@@ -201,6 +201,16 @@ export default function Testimonials() {
           </div>
         </div>
 
+        {/* FTC Disclaimer — required by US law when showing specific results */}
+        <p className="font-mono text-white/20 text-[10px] text-center leading-relaxed mb-12 max-w-2xl mx-auto">
+          Results disclosed are individual client experiences and are not typical. Career outcomes vary based on
+          individual effort, qualifications, market conditions, and other factors outside our control.
+          No specific result is guaranteed.{' '}
+          <a href="/terms" className="underline underline-offset-2 hover:text-white/40 transition-colors">
+            See full disclaimer in Terms of Service.
+          </a>
+        </p>
+
         {/* CTA */}
         <div className="text-center">
           <p className="font-sans text-white/30 mb-6 text-sm">Ready to add your name to this list?</p>

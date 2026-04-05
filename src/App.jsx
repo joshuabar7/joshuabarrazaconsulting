@@ -7,13 +7,17 @@ import Pricing from './components/Pricing'
 import Booking from './components/Booking'
 import Footer from './components/Footer'
 import CookieConsent from './components/CookieConsent'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
 
 function handleConsentAccepted() {
-  // Broadcast to any component that needs to know (e.g. Booking/Calendly)
   window.dispatchEvent(new Event('jbc:consent-accepted'))
 }
 
-export default function App() {
+function Router() {
+  const path = window.location.pathname
+  if (path === '/privacy') return <PrivacyPolicy />
+  if (path === '/terms')   return <TermsOfService />
   return (
     <main className="bg-white overflow-x-hidden">
       <Navbar />
@@ -27,4 +31,8 @@ export default function App() {
       <CookieConsent onAccept={handleConsentAccepted} />
     </main>
   )
+}
+
+export default function App() {
+  return <Router />
 }

@@ -4,6 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Linkedin, Mail } from 'lucide-react'
 import { SITE } from '../content'
 
+const LEGAL_LINKS = [
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms of Service', href: '/terms' },
+]
+
 gsap.registerPlugin(ScrollTrigger)
 
 const { footer } = SITE
@@ -95,7 +100,17 @@ export default function Footer() {
           <p className="font-mono text-white/15 text-xs text-center order-1 md:order-2">
             {footer.copy}
           </p>
-          <p className="font-mono text-white/15 text-xs order-3">{footer.credit}</p>
+          <div className="flex items-center gap-4 order-3">
+            {LEGAL_LINKS.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="font-mono text-white/20 text-xs hover:text-[#C9A84C] transition-colors"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

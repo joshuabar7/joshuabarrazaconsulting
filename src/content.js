@@ -220,8 +220,7 @@ export const SITE = {
       { label: 'Book a Call',  href: '#book'     },
     ],
     socials: {
-      linkedin:  'https://linkedin.com',
-      instagram: 'https://instagram.com',
+      linkedin: 'https://www.linkedin.com/in/joshuabarraza-',
     },
   },
 }
