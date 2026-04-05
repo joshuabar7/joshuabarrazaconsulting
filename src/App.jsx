@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
@@ -11,19 +12,27 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 
 function handleConsentAccepted() {
-  // Unlock Google Analytics tracking now that user has consented
   if (typeof window.gtag === 'function') {
     window.gtag('consent', 'update', {
       'analytics_storage': 'granted',
       'ad_storage': 'denied'
     })
   }
-  // Notify Calendly and other components
   window.dispatchEvent(new Event('jbc:consent-accepted'))
 }
 
 function Router() {
-  const hash = window.location.hash.replace('#', '')
+  const [hash, setHash] = useState(window.location.hash.replace('#', ''))
+
+  useEffect(() => {
+    function onHashChange() {
+      setHash(window.location.hash.replace('#', ''))
+      window.scrollTo(0, 0)
+    }
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
   if (hash === '/privacy') return <PrivacyPolicy />
   if (hash === '/terms')   return <TermsOfService />
   return (
