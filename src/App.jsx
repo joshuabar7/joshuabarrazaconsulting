@@ -11,6 +11,14 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 
 function handleConsentAccepted() {
+  // Unlock Google Analytics tracking now that user has consented
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'denied'
+    })
+  }
+  // Notify Calendly and other components
   window.dispatchEvent(new Event('jbc:consent-accepted'))
 }
 
