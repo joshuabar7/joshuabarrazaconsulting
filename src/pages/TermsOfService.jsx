@@ -203,8 +203,8 @@ export default function TermsOfService() {
         <div className="max-w-3xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-mono text-white/20 text-xs">© 2026 Joshua Barraza Consulting · All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="/privacy" className="font-mono text-xs text-white/30 hover:text-white/60 transition-colors">Privacy Policy</a>
-            <a href="/terms" className="font-mono text-xs text-[#C9A84C]">Terms of Service</a>
+            <a href="#/privacy" className="font-mono text-xs text-white/30 hover:text-white/60 transition-colors">Privacy Policy</a>
+            <a href="#/terms" className="font-mono text-xs text-[#C9A84C]">Terms of Service</a>
           </div>
         </div>
       </div>

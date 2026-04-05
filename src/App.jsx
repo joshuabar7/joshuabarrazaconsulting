@@ -23,9 +23,9 @@ function handleConsentAccepted() {
 }
 
 function Router() {
-  const path = window.location.pathname
-  if (path === '/privacy') return <PrivacyPolicy />
-  if (path === '/terms')   return <TermsOfService />
+  const hash = window.location.hash.replace('#', '')
+  if (hash === '/privacy') return <PrivacyPolicy />
+  if (hash === '/terms')   return <TermsOfService />
   return (
     <main className="bg-white overflow-x-hidden">
       <Navbar />

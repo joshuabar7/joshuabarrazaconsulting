@@ -62,7 +62,7 @@ export default function CookieConsent({ onAccept }) {
             We use scheduling tools (Calendly) that set cookies to deliver a smooth booking experience.
             By clicking <strong className="text-white/70">Accept</strong>, you agree to this.{' '}
             <a
-              href="/privacy"
+              href="#/privacy"
               className="text-[#C9A84C] underline underline-offset-2 hover:text-[#E4C56A] transition-colors"
             >
               Privacy Policy

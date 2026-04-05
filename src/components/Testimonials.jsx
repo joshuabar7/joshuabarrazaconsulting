@@ -206,7 +206,7 @@ export default function Testimonials() {
           Results disclosed are individual client experiences and are not typical. Career outcomes vary based on
           individual effort, qualifications, market conditions, and other factors outside our control.
           No specific result is guaranteed.{' '}
-          <a href="/terms" className="underline underline-offset-2 hover:text-white/40 transition-colors">
+          <a href="#/terms" className="underline underline-offset-2 hover:text-white/40 transition-colors">
             See full disclaimer in Terms of Service.
           </a>
         </p>

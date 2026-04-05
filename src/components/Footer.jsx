@@ -5,8 +5,8 @@ import { Linkedin, Mail } from 'lucide-react'
 import { SITE } from '../content'
 
 const LEGAL_LINKS = [
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Terms of Service', href: '/terms' },
+  { label: 'Privacy Policy', href: '#/privacy' },
+  { label: 'Terms of Service', href: '#/terms' },
 ]
 
 gsap.registerPlugin(ScrollTrigger)
