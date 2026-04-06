@@ -109,15 +109,15 @@ export default function LaunchHero() {
               <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-slate-mid mb-5">Program Areas</p>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: 'College Apps',   icon: '🎓' },
-                  { label: 'Career Direction', icon: '🧭' },
-                  { label: 'Internships',     icon: '💼' },
-                  { label: 'Gap Year Paths',  icon: '🌍' },
-                  { label: 'Grad School',     icon: '📚' },
-                  { label: 'Major Selection', icon: '🗺️' },
-                ].map(({ label, icon }, i) => (
+                  'College Apps',
+                  'Career Direction',
+                  'Internships',
+                  'Gap Year Paths',
+                  'Grad School',
+                  'Major Selection',
+                ].map((label, i) => (
                   <div key={i} className="flex items-center gap-2 bg-off-white rounded-2xl px-3 py-2.5">
-                    <span className="text-sm">{icon}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber shrink-0" />
                     <span className="font-sans text-xs font-medium text-midnight/70">{label}</span>
                   </div>
                 ))}
