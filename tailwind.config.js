@@ -4,13 +4,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        // ── Forest green palette (from the kitchen/living room) ───────────
-        jet:            '#0C1F14',   // deepest bg (almost black-green)
-        'jet-light':    '#112819',   // slightly lifted
-        charcoal:       '#193522',   // card surfaces
-        'dark-mid':     '#1F402A',   // raised cards
-        'charcoal-soft':'#274F34',   // borders, subtle surfaces
-        'forest':       '#2E6040',   // visible green accent
+        // ── Midnight slate palette (rebrand from forest green) ───────────
+        jet:            '#0D0F14',   // deepest bg (near-black, slight blue)
+        'jet-light':    '#131620',   // slightly lifted
+        charcoal:       '#1A1D2A',   // card surfaces
+        'dark-mid':     '#252836',   // raised cards / borders
+        'charcoal-soft':'#2E3245',   // visible accent surfaces
+        'forest':       '#3D4166',   // subtle blue-slate accent
+
+        // ── Midnight aliases (explicit names for new components) ──────────
+        midnight:           '#0D0F14',
+        'midnight-lift':    '#131620',
+        'slate-card':       '#1A1D2A',
+        'slate-border':     '#252836',
+        'slate-mid-bg':     '#2E3245',
+
+        // ── Amber family (The Launch Program accent) ──────────────────────
+        amber:          '#E8A830',
+        'amber-light':  '#F5C84A',
+        'amber-muted':  '#C4892A',
+        'amber-dim':    '#E8A83015',
 
         // ── Gold / brass (unchanged — already perfect for this palette) ──
         gold:           '#C9A84C',
@@ -24,9 +37,9 @@ export default {
         'light-gray':   '#E4E1D8',
 
         // ── Text ─────────────────────────────────────────────────────────
-        slate:          '#1A3022',
-        'slate-mid':    '#5A7A62',
-        'slate-light':  '#8AAA90',
+        slate:          '#1A1E2A',   // near-neutral dark slate (was green-tinted)
+        'slate-mid':    '#5A6175',   // medium slate-gray
+        'slate-light':  '#8A93A8',   // light slate
 
         // ── Legacy aliases so all existing components work unchanged ──────
         navy:           '#193522',

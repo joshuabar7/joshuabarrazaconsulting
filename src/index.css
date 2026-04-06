@@ -8,7 +8,7 @@
   body {
     @apply font-sans;
     background-color: #FAF9F6;
-    color: #1A3022;
+    color: #1A1E2A;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -31,6 +31,16 @@
 /* Gold shimmer — works on any bg */
 .text-gold-shimmer {
   background: linear-gradient(90deg, #C9A84C 0%, #E4C56A 30%, #C9A84C 60%, #A88A3A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Amber shimmer — Launch Program accent */
+.text-amber-shimmer {
+  background: linear-gradient(90deg, #E8A830 0%, #F5C84A 30%, #E8A830 60%, #C4892A 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

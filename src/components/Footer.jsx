@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Linkedin, Mail } from 'lucide-react'
-import { SITE } from '../content'
+import { SHARED } from '../content'
 
 const LEGAL_LINKS = [
   { label: 'Privacy Policy', href: '#/privacy' },
@@ -11,7 +12,7 @@ const LEGAL_LINKS = [
 
 gsap.registerPlugin(ScrollTrigger)
 
-const { footer } = SITE
+const { footer } = SHARED
 
 export default function Footer() {
   const containerRef = useRef(null)
@@ -61,10 +62,10 @@ export default function Footer() {
             <ul className="space-y-3">
               {footer.links.map(({ label, href }) => (
                 <li key={label}>
-                  <a href={href}
+                  <Link to={href}
                     className="font-sans text-white/35 text-sm hover:text-gold hover:-translate-y-px transition-all duration-200 inline-block">
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
 

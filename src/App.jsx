@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HowItWorks from './components/HowItWorks'
-import Testimonials from './components/Testimonials'
-import AboutJoshua from './components/AboutJoshua'
-import Pricing from './components/Pricing'
-import Booking from './components/Booking'
-import Footer from './components/Footer'
-import CookieConsent from './components/CookieConsent'
+import { Routes, Route } from 'react-router-dom'
+import RootLayout from './layouts/RootLayout'
+import Home from './pages/Home'
+import LaunchProgram from './pages/LaunchProgram'
+import JBCPremium from './pages/JBCPremium'
+import Impact from './pages/Impact'
+import Apply from './pages/Apply'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
+import CookieConsent from './components/CookieConsent'
 
 function handleConsentAccepted() {
   if (typeof window.gtag === 'function') {
@@ -21,35 +19,22 @@ function handleConsentAccepted() {
   window.dispatchEvent(new Event('jbc:consent-accepted'))
 }
 
-function Router() {
-  const [hash, setHash] = useState(window.location.hash.replace('#', ''))
-
-  useEffect(() => {
-    function onHashChange() {
-      setHash(window.location.hash.replace('#', ''))
-      window.scrollTo(0, 0)
-    }
-    window.addEventListener('hashchange', onHashChange)
-    return () => window.removeEventListener('hashchange', onHashChange)
-  }, [])
-
-  if (hash === '/privacy') return <PrivacyPolicy />
-  if (hash === '/terms')   return <TermsOfService />
-  return (
-    <main className="bg-white overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <HowItWorks />
-      <Testimonials />
-      <AboutJoshua />
-      <Pricing />
-      <Booking />
-      <Footer />
-      <CookieConsent onAccept={handleConsentAccepted} />
-    </main>
-  )
-}
-
 export default function App() {
-  return <Router />
+  return (
+    <>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route index element={<Home />} />
+          <Route path="launch" element={<LaunchProgram />} />
+          <Route path="premium" element={<JBCPremium />} />
+          <Route path="impact" element={<Impact />} />
+          <Route path="apply" element={<Apply />} />
+          <Route path="apply/:track" element={<Apply />} />
+          <Route path="privacy" element={<PrivacyPolicy />} />
+          <Route path="terms" element={<TermsOfService />} />
+        </Route>
+      </Routes>
+      <CookieConsent onAccept={handleConsentAccepted} />
+    </>
+  )
 }
