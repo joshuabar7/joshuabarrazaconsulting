@@ -15,9 +15,9 @@ export const SHARED = {
       { label: 'Launch Program', href: '/launch'  },
       { label: 'JBC Premium',    href: '/premium' },
       { label: 'Impact',         href: '/impact'  },
-      { label: 'Apply Now',      href: '/apply',  isCTA: true },
+      { label: 'Book a Call',    href: '/apply',  isCTA: true },
     ],
-    cta: 'Apply Now',
+    cta: 'Book a Call',
   },
 
   footer: {
@@ -31,7 +31,7 @@ export const SHARED = {
       { label: 'Launch Program', href: '/launch'  },
       { label: 'JBC Premium',    href: '/premium' },
       { label: 'Impact',         href: '/impact'  },
-      { label: 'Apply Now',      href: '/apply'   },
+      { label: 'Book a Call',    href: '/apply'   },
     ],
     socials: {
       linkedin:  'https://www.linkedin.com/in/joshuabarraza-',
@@ -132,8 +132,8 @@ export const LAUNCH = {
     line1:    'Actual advice.',
     line2:    'Actually free.',
     sub:      'Free and subsidized advising for high school and college students. College apps, career direction, internships, and more. No cost, no catch.',
-    cta:      'Apply Now — It\'s Free',
-    ctaSub:   'See How It Works',
+    cta:      'See Services',
+    ctaSub:   'Get in Touch',
   },
 
   services: [

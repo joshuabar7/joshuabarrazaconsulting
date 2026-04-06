@@ -193,11 +193,11 @@ export default function Impact() {
             <div className="relative bg-amber/8 border border-amber/20 rounded-4xl p-8 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber to-transparent" />
               <p className="font-mono text-amber text-xs tracking-wider uppercase mb-3">For students</p>
-              <h3 className="font-sans font-extrabold text-midnight text-xl mb-3">Join the Launch Program</h3>
-              <p className="font-sans text-midnight/55 text-sm leading-relaxed mb-6">Free advising for high school and college students. Apply for a spot.</p>
-              <Link to="/apply/launch"
+              <h3 className="font-sans font-extrabold text-midnight text-xl mb-3">The Launch Program</h3>
+              <p className="font-sans text-midnight/55 text-sm leading-relaxed mb-6">Free advising for high school and college students. No cost, no catch.</p>
+              <Link to="/launch"
                 className="inline-flex items-center gap-2 bg-amber text-midnight font-sans font-bold text-sm px-6 py-3 rounded-pill hover:bg-amber-light transition-colors">
-                Apply free →
+                See services →
               </Link>
             </div>
             <div className="relative bg-slate-card border border-white/6 rounded-4xl p-8 overflow-hidden">

@@ -72,8 +72,8 @@ export default function LaunchHero() {
 
             {/* CTAs */}
             <div className="lhero-ctas flex flex-col sm:flex-row gap-4 mb-12">
-              <Link
-                to="/apply/launch"
+              <a
+                href="#launch-services"
                 className="inline-flex items-center justify-center gap-2 bg-amber text-midnight font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
                 style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)' }}
@@ -81,10 +81,10 @@ export default function LaunchHero() {
               >
                 <span className="absolute inset-0 bg-amber-light translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                 <span className="relative">{hero.cta}</span>
-                <span className="relative opacity-60 text-sm">→</span>
-              </Link>
+                <span className="relative opacity-60 text-sm">↓</span>
+              </a>
               <a
-                href="#launch-process"
+                href="mailto:joshuabarraza0315@gmail.com"
                 className="inline-flex items-center justify-center gap-2 border border-midnight/20 text-midnight/70 font-sans font-semibold px-8 py-4 rounded-pill hover:border-amber/50 hover:text-amber-muted transition-all duration-300"
               >
                 {hero.ctaSub}
@@ -133,9 +133,9 @@ export default function LaunchHero() {
               <p className="font-sans text-sm text-midnight/70 leading-relaxed mb-3">
                 Sessions are free because we're proving the model works. You get real advising. We build the track record.
               </p>
-              <Link to="/apply/launch" className="font-sans text-xs text-amber-muted font-semibold hover:text-amber transition-colors">
-                Apply for a free spot →
-              </Link>
+              <a href="mailto:joshuabarraza0315@gmail.com" className="font-sans text-xs text-amber-muted font-semibold hover:text-amber transition-colors">
+                Get in touch →
+              </a>
             </div>
 
           </div>
