@@ -14,7 +14,7 @@ export default function SectionHeader({ label, heading, subhead, accent = 'gold'
         <span className={shimmerClass}>{heading}</span>
       </h2>
       {subhead && (
-        <p className="font-sans text-slate-mid text-base md:text-lg max-w-2xl leading-relaxed mx-auto">
+        <p className="font-sans text-white/50 text-base md:text-lg max-w-2xl leading-relaxed mx-auto">
           {subhead}
         </p>
       )}

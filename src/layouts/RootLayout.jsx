@@ -12,7 +12,7 @@ export default function RootLayout() {
   }, [pathname])
 
   return (
-    <div className="bg-white overflow-x-hidden">
+    <div className="bg-forest-card overflow-x-hidden">
       <Navbar />
       <Outlet />
       <Footer />

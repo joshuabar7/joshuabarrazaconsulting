@@ -24,7 +24,7 @@ export default function LaunchServices() {
   }, [])
 
   return (
-    <section id="launch-services" ref={containerRef} className="bg-ivory py-24 md:py-32 px-6 md:px-10">
+    <section id="launch-services" ref={containerRef} className="bg-forest-lift py-24 md:py-32 px-6 md:px-10">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -32,10 +32,10 @@ export default function LaunchServices() {
           <div className="inline-flex items-center gap-2 border border-amber/30 bg-amber/8 text-amber-muted rounded-pill px-4 py-1.5 mb-6">
             <span className="font-mono text-xs tracking-widest uppercase">Program Services</span>
           </div>
-          <h2 className="font-sans font-extrabold text-midnight text-3xl md:text-5xl tracking-tight leading-[1.08] mb-4">
+          <h2 className="font-sans font-extrabold text-white text-3xl md:text-5xl tracking-tight leading-[1.08] mb-4">
             What we work on.
           </h2>
-          <p className="font-sans text-slate-mid text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="font-sans text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Every session is 1:1, tailored to exactly where you are. Pick the area that matters most right now.
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function LaunchServices() {
         <div className="launch-grid grid grid-cols-1 md:grid-cols-2 gap-6">
           {LAUNCH.services.map((svc, i) => (
             <div key={i}
-              className="launch-svc-card relative bg-white rounded-4xl p-7 border border-light-gray overflow-hidden hover:border-amber/30 transition-colors duration-300 group"
+              className="launch-svc-card relative bg-forest-card rounded-4xl p-7 border border-white/10 overflow-hidden hover:border-amber/30 transition-colors duration-300 group"
             >
               {/* Amber top line on hover */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -53,13 +53,13 @@ export default function LaunchServices() {
               <div className="font-mono text-[10px] text-amber/60 tracking-[0.2em] uppercase mb-4">{svc.num}</div>
 
               {/* Title */}
-              <h3 className="font-sans font-extrabold text-midnight text-xl leading-snug mb-1">
+              <h3 className="font-sans font-extrabold text-white text-xl leading-snug mb-1">
                 {svc.title}
               </h3>
               <p className="font-mono text-xs text-amber-muted mb-4">{svc.tagline}</p>
 
               {/* Body */}
-              <p className="font-sans text-midnight/55 text-sm leading-relaxed mb-5">
+              <p className="font-sans text-white/55 text-sm leading-relaxed mb-5">
                 {svc.body}
               </p>
 
@@ -70,7 +70,7 @@ export default function LaunchServices() {
                     <div className="w-4 h-4 rounded-full bg-amber/15 flex items-center justify-center shrink-0">
                       <Check className="w-2.5 h-2.5 text-amber-muted" strokeWidth={2.5} />
                     </div>
-                    <span className="font-sans text-xs text-midnight/60">{item}</span>
+                    <span className="font-sans text-xs text-white/60">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -85,9 +85,9 @@ export default function LaunchServices() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-14">
-          <p className="font-sans text-midnight/45 text-sm mb-5">Not sure which area fits your situation?</p>
+          <p className="font-sans text-white/45 text-sm mb-5">Not sure which area fits your situation?</p>
           <a href="/apply/launch"
-            className="inline-flex items-center gap-2 border-2 border-amber text-amber-muted font-sans font-bold text-sm px-7 py-3.5 rounded-pill hover:bg-amber hover:text-midnight transition-all duration-300">
+            className="inline-flex items-center gap-2 border-2 border-amber text-amber-muted font-sans font-bold text-sm px-7 py-3.5 rounded-pill hover:bg-amber hover:text-white transition-all duration-300">
             Apply and we'll figure it out together →
           </a>
         </div>

@@ -27,18 +27,18 @@ export default function TrackSplit() {
   }, [])
 
   return (
-    <section id="tracks" ref={containerRef} className="bg-ivory py-24 md:py-32 px-6 md:px-10">
+    <section id="tracks" ref={containerRef} className="bg-forest py-24 md:py-32 px-6 md:px-10">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
         <div className="split-header text-center mb-16">
           <div className="inline-flex items-center gap-2 border border-slate/15 bg-slate/5 rounded-pill px-4 py-1.5 mb-6">
-            <span className="font-mono text-xs tracking-widest uppercase text-slate-mid">{trackSplit.label}</span>
+            <span className="font-mono text-xs tracking-widest uppercase text-white/50">{trackSplit.label}</span>
           </div>
-          <h2 className="font-sans font-extrabold text-midnight text-3xl md:text-5xl tracking-tight leading-[1.08] mb-4">
+          <h2 className="font-sans font-extrabold text-white text-3xl md:text-5xl tracking-tight leading-[1.08] mb-4">
             {trackSplit.heading}
           </h2>
-          <p className="font-sans text-slate-mid text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="font-sans text-white/50 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
             {trackSplit.subhead}
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function TrackSplit() {
         <div className="split-cards grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
           {/* Launch Program card — light surface, amber accent */}
-          <div className="split-card relative bg-off-white rounded-4xl p-8 md:p-10 overflow-hidden border border-light-gray flex flex-col">
+          <div className="split-card relative bg-forest-lift rounded-4xl p-8 md:p-10 overflow-hidden border border-white/10 flex flex-col">
             {/* Amber top line */}
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-amber to-transparent" />
 
@@ -58,17 +58,17 @@ export default function TrackSplit() {
             </div>
 
             {/* Tagline */}
-            <p className="font-mono text-[11px] tracking-[0.15em] uppercase text-slate-mid mb-3">
+            <p className="font-mono text-[11px] tracking-[0.15em] uppercase text-white/50 mb-3">
               {trackSplit.launch.tagline}
             </p>
 
             {/* Heading */}
-            <h3 className="font-sans font-extrabold text-midnight text-2xl md:text-3xl leading-snug mb-4">
+            <h3 className="font-sans font-extrabold text-white text-2xl md:text-3xl leading-snug mb-4">
               College to career — guided.
             </h3>
 
             {/* Sub */}
-            <p className="font-sans text-slate-mid text-sm md:text-base leading-relaxed mb-8">
+            <p className="font-sans text-white/50 text-sm md:text-base leading-relaxed mb-8">
               {trackSplit.launch.sub}
             </p>
 
@@ -79,17 +79,17 @@ export default function TrackSplit() {
                   <div className="w-5 h-5 rounded-full bg-amber/15 flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3 text-amber-muted" strokeWidth={2.5} />
                   </div>
-                  <span className="font-sans text-sm text-midnight/70">{service}</span>
+                  <span className="font-sans text-sm text-white/70">{service}</span>
                 </li>
               ))}
             </ul>
 
             {/* Proof + CTA */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-light-gray">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-white/10">
               <span className="font-mono text-xs text-amber-muted tracking-wider">{trackSplit.launch.proof}</span>
               <Link
                 to={trackSplit.launch.href}
-                className="inline-flex items-center gap-2 border-2 border-amber text-amber-muted font-sans font-bold text-sm px-6 py-3 rounded-pill hover:bg-amber hover:text-midnight transition-all duration-300 shrink-0"
+                className="inline-flex items-center gap-2 border-2 border-amber text-amber-muted font-sans font-bold text-sm px-6 py-3 rounded-pill hover:bg-amber hover:text-white transition-all duration-300 shrink-0"
               >
                 {trackSplit.launch.cta}
                 <span className="text-xs opacity-70">→</span>
@@ -97,21 +97,21 @@ export default function TrackSplit() {
             </div>
           </div>
 
-          {/* JBC Premium card — dark surface, gold accent */}
-          <div className="split-card relative bg-midnight rounded-4xl p-8 md:p-10 overflow-hidden border border-white/6 flex flex-col">
+          {/* JBC Premium card — light surface, gold accent */}
+          <div className="split-card relative bg-forest-card rounded-4xl p-8 md:p-10 overflow-hidden border border-white/10 shadow-sm flex flex-col">
             {/* Gold top line */}
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 border border-gold/30 bg-gold/8 text-gold rounded-pill px-4 py-1.5 mb-6 w-fit">
+            <div className="inline-flex items-center gap-2 border border-gold/30 bg-gold/10 text-gold-muted rounded-pill px-4 py-1.5 mb-6 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
               <span className="font-mono text-[10px] tracking-widest uppercase">{trackSplit.premium.badge}</span>
               <span className="w-px h-3 bg-gold/25" />
-              <span className="font-mono text-[10px] text-gold/50">{trackSplit.premium.badgeSub}</span>
+              <span className="font-mono text-[10px] text-gold/60">{trackSplit.premium.badgeSub}</span>
             </div>
 
             {/* Tagline */}
-            <p className="font-mono text-[11px] tracking-[0.15em] uppercase text-white/30 mb-3">
+            <p className="font-mono text-[11px] tracking-[0.15em] uppercase text-white/50 mb-3">
               {trackSplit.premium.tagline}
             </p>
 
@@ -121,7 +121,7 @@ export default function TrackSplit() {
             </h3>
 
             {/* Sub */}
-            <p className="font-sans text-white/40 text-sm md:text-base leading-relaxed mb-8">
+            <p className="font-sans text-white/50 text-sm md:text-base leading-relaxed mb-8">
               {trackSplit.premium.sub}
             </p>
 
@@ -130,16 +130,16 @@ export default function TrackSplit() {
               {trackSplit.premium.services.map((service, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-gold/12 flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-gold" strokeWidth={2.5} />
+                    <Check className="w-3 h-3 text-gold-muted" strokeWidth={2.5} />
                   </div>
-                  <span className="font-sans text-sm text-white/60">{service}</span>
+                  <span className="font-sans text-sm text-white/65">{service}</span>
                 </li>
               ))}
             </ul>
 
             {/* Proof + CTA */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-white/8">
-              <span className="font-mono text-xs text-gold/60 tracking-wider">{trackSplit.premium.proof}</span>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-white/10">
+              <span className="font-mono text-xs text-gold-muted tracking-wider">{trackSplit.premium.proof}</span>
               <Link
                 to={trackSplit.premium.href}
                 className="inline-flex items-center gap-2 bg-gold text-midnight font-sans font-bold text-sm px-6 py-3 rounded-pill overflow-hidden relative group shrink-0"

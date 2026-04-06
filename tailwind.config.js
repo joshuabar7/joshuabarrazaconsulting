@@ -10,7 +10,10 @@ export default {
         charcoal:       '#1A1D2A',   // card surfaces
         'dark-mid':     '#252836',   // raised cards / borders
         'charcoal-soft':'#2E3245',   // visible accent surfaces
-        'forest':       '#3D4166',   // subtle blue-slate accent
+        'forest':       '#0A1A10',   // deep forest green — primary dark bg
+        'forest-lift':  '#0D1F14',   // slightly raised surface
+        'forest-card':  '#122318',   // card surface on forest bg
+        'forest-border':'#1E3826',   // border on forest bg
 
         // ── Midnight aliases (explicit names for new components) ──────────
         midnight:           '#0D0F14',
@@ -32,9 +35,10 @@ export default {
         'gold-dim':     '#C9A84C18',
 
         // ── Light surfaces ────────────────────────────────────────────────
+        parchment:      '#FFFBEB',   // warm cream — primary bg
         ivory:          '#FAF9F6',
-        'off-white':    '#F3F0E8',
-        'light-gray':   '#E4E1D8',
+        'off-white':    '#F5F1E8',
+        'light-gray':   '#E8E3D8',
 
         // ── Text ─────────────────────────────────────────────────────────
         slate:          '#1A1E2A',   // near-neutral dark slate (was green-tinted)

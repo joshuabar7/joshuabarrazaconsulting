@@ -7,8 +7,8 @@
 
   body {
     @apply font-sans;
-    background-color: #FAF9F6;
-    color: #1A1E2A;
+    background-color: #0A1A10;
+    color: #E8F5EE;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

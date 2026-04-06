@@ -25,7 +25,7 @@ export default function LaunchHero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[100dvh] bg-ivory overflow-hidden flex items-center"
+      className="relative min-h-[100dvh] bg-forest overflow-hidden flex items-center"
     >
       {/* Amber top line */}
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-amber to-transparent" />
@@ -57,7 +57,7 @@ export default function LaunchHero() {
 
             {/* Headline */}
             <h1 className="mb-7 leading-none">
-              <span className="lhero-line1 block font-sans font-extrabold text-midnight text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.05]">
+              <span className="lhero-line1 block font-sans font-extrabold text-white text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.05]">
                 {hero.line1}
               </span>
               <span className="lhero-line2 block font-serif italic text-amber-shimmer text-5xl md:text-6xl lg:text-7xl leading-none mt-2">
@@ -66,7 +66,7 @@ export default function LaunchHero() {
             </h1>
 
             {/* Sub */}
-            <p className="lhero-sub font-sans text-midnight/50 text-base md:text-lg max-w-lg leading-relaxed mb-10">
+            <p className="lhero-sub font-sans text-white/50 text-base md:text-lg max-w-lg leading-relaxed mb-10">
               {hero.sub}
             </p>
 
@@ -74,7 +74,7 @@ export default function LaunchHero() {
             <div className="lhero-ctas flex flex-col sm:flex-row gap-4 mb-12">
               <a
                 href="#launch-services"
-                className="inline-flex items-center justify-center gap-2 bg-amber text-midnight font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
+                className="inline-flex items-center justify-center gap-2 bg-amber text-white font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
                 style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
@@ -85,7 +85,7 @@ export default function LaunchHero() {
               </a>
               <a
                 href="mailto:joshuabarraza0315@gmail.com"
-                className="inline-flex items-center justify-center gap-2 border border-midnight/20 text-midnight/70 font-sans font-semibold px-8 py-4 rounded-pill hover:border-amber/50 hover:text-amber-muted transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border border-white/12 text-white/70 font-sans font-semibold px-8 py-4 rounded-pill hover:border-amber/50 hover:text-amber-muted transition-all duration-300"
               >
                 {hero.ctaSub}
               </a>
@@ -97,7 +97,7 @@ export default function LaunchHero() {
                 <span className="w-2 h-2 rounded-full bg-amber animate-pulse-dot" />
                 <span className="font-mono text-xs text-amber-muted tracking-wider">Free for qualifying students</span>
               </div>
-              <span className="font-mono text-xs text-midnight/30">· 48hr response time</span>
+              <span className="font-mono text-xs text-white/30">· 48hr response time</span>
             </div>
           </div>
 
@@ -105,8 +105,8 @@ export default function LaunchHero() {
           <div className="lhero-cards hidden lg:flex flex-col gap-4 py-32">
 
             {/* Programs quick-look */}
-            <div className="bg-white rounded-3xl p-6 border border-light-gray shadow-sm">
-              <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-slate-mid mb-5">Program Areas</p>
+            <div className="bg-forest-card rounded-3xl p-6 border border-white/10 shadow-sm">
+              <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/50 mb-5">Program Areas</p>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   'College Apps',
@@ -116,9 +116,9 @@ export default function LaunchHero() {
                   'Grad School',
                   'Major Selection',
                 ].map((label, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-off-white rounded-2xl px-3 py-2.5">
+                  <div key={i} className="flex items-center gap-2 bg-forest-lift rounded-2xl px-3 py-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber shrink-0" />
-                    <span className="font-sans text-xs font-medium text-midnight/70">{label}</span>
+                    <span className="font-sans text-xs font-medium text-white/70">{label}</span>
                   </div>
                 ))}
               </div>
@@ -127,10 +127,10 @@ export default function LaunchHero() {
             {/* Founding cohort card */}
             <div className="relative bg-amber/8 border border-amber/20 rounded-3xl p-6 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber to-transparent" />
-              <div className="inline-flex items-center gap-2 bg-amber text-midnight font-mono text-[10px] font-bold tracking-wider uppercase rounded-pill px-3 py-1 mb-4">
+              <div className="inline-flex items-center gap-2 bg-amber text-white font-mono text-[10px] font-bold tracking-wider uppercase rounded-pill px-3 py-1 mb-4">
                 ✦ Founding Cohort
               </div>
-              <p className="font-sans text-sm text-midnight/70 leading-relaxed mb-3">
+              <p className="font-sans text-sm text-white/70 leading-relaxed mb-3">
                 Sessions are free because we're proving the model works. You get real advising. We build the track record.
               </p>
               <a href="mailto:joshuabarraza0315@gmail.com" className="font-sans text-xs text-amber-muted font-semibold hover:text-amber transition-colors">

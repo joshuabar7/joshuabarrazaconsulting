@@ -73,7 +73,7 @@ export default function LaunchProcess() {
         {/* CTA */}
         <div className="lp-cta text-center">
           <a href="/apply/launch"
-            className="inline-flex items-center gap-2 bg-amber text-midnight font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
+            className="inline-flex items-center gap-2 bg-amber text-white font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
             style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
             onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)' }}
             onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}>

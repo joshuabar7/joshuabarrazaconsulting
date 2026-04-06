@@ -74,7 +74,7 @@ export default function Hero() {
             <div className="hero-ctas flex flex-col sm:flex-row gap-4 mb-12">
               <a
                 href="#book"
-                className="inline-flex items-center justify-center gap-2 bg-gold text-jet font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
+                className="inline-flex items-center justify-center gap-2 bg-gold text-midnight font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
                 style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)' }}
                 onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
@@ -98,7 +98,7 @@ export default function Hero() {
                   {[['SK','#C9A84C'],['MT','#E4C56A'],['PS','#A88A3A']].map(([init, c], i) => (
                     <div
                       key={i}
-                      className="w-8 h-8 rounded-full border-2 border-jet flex items-center justify-center text-[10px] font-bold text-jet"
+                      className="w-8 h-8 rounded-full border-2 border-jet flex items-center justify-center text-[10px] font-bold text-white"
                       style={{ backgroundColor: c }}
                     >
                       {init}

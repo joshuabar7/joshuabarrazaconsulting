@@ -36,7 +36,7 @@ export default function AboutJoshua() {
   }, [])
 
   return (
-    <section ref={containerRef} id="about" className="bg-jet py-28 px-6 relative overflow-hidden">
+    <section ref={containerRef} id="about" className="bg-forest py-28 px-6 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.025]"
         style={{
           backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
@@ -59,14 +59,14 @@ export default function AboutJoshua() {
 
             <div className="space-y-5 mb-8">
               {about.story.map((para, i) => (
-                <p key={i} className={`font-sans text-base leading-relaxed ${i === about.story.length - 1 ? 'text-white/80 font-medium' : 'text-white/55'}`}>
+                <p key={i} className={`font-sans text-base leading-relaxed ${i === about.story.length - 1 ? 'text-midnight/80 font-medium' : 'text-white/60'}`}>
                   {para}
                 </p>
               ))}
             </div>
 
             <a href="#book"
-              className="inline-flex items-center gap-2 font-sans font-bold text-sm text-jet bg-gold px-6 py-3.5 rounded-pill overflow-hidden relative group"
+              className="inline-flex items-center gap-2 font-sans font-bold text-sm text-white bg-gold px-6 py-3.5 rounded-pill overflow-hidden relative group"
               style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
               onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)' }}
               onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}>
@@ -108,9 +108,9 @@ export default function AboutJoshua() {
             </div>
 
             {/* Gen Z quote */}
-            <div className="bg-charcoal rounded-3xl p-6 border border-white/6 relative overflow-hidden">
+            <div className="bg-forest-card rounded-3xl p-6 border border-white/10 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-              <p className="font-serif italic text-white/70 text-lg leading-relaxed mb-4">
+              <p className="font-serif italic text-white/65 text-lg leading-relaxed mb-4">
                 "{about.quote}"
               </p>
               <p className="font-mono text-gold text-xs tracking-widest">- {about.name}</p>
@@ -121,10 +121,10 @@ export default function AboutJoshua() {
         {/* Stats */}
         <div className="about-facts grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {FACTS.map((f, i) => (
-            <div key={i} className="about-fact bg-charcoal rounded-3xl p-6 text-center relative overflow-hidden border border-white/5">
+            <div key={i} className="about-fact bg-forest-card rounded-3xl p-6 text-center relative overflow-hidden border border-white/10 shadow-sm">
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
               <div className="font-sans font-extrabold text-4xl mb-1 text-gold-shimmer">{f.value}</div>
-              <div className="font-mono text-white/30 text-xs tracking-wide">{f.label}</div>
+              <div className="font-mono text-white/35 text-xs tracking-wide">{f.label}</div>
             </div>
           ))}
         </div>
@@ -132,13 +132,13 @@ export default function AboutJoshua() {
         {/* Values */}
         <div className="about-values grid grid-cols-1 md:grid-cols-3 gap-5">
           {VALUES.map((v, i) => (
-            <div key={i} className="about-value bg-charcoal rounded-3xl p-7 border border-white/5 relative overflow-hidden">
+            <div key={i} className="about-value bg-forest-card rounded-3xl p-7 border border-white/10 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
               <div className="w-8 h-8 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center mb-5">
                 <span className="font-mono text-gold text-xs font-bold">{v.num}</span>
               </div>
               <h4 className="font-sans font-bold text-white text-base mb-3">{v.title}</h4>
-              <p className="font-sans text-white/40 text-sm leading-relaxed">{v.body}</p>
+              <p className="font-sans text-white/50 text-sm leading-relaxed">{v.body}</p>
             </div>
           ))}
         </div>

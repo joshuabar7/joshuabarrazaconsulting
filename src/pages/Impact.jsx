@@ -53,20 +53,20 @@ export default function Impact() {
         <title>Impact & Results — Joshua Barraza Consulting</title>
         <meta name="description" content="Real outcomes from both The Launch Program and JBC Premium. Student stories, career results, and social proof." />
       </Helmet>
-      <main ref={containerRef} className="bg-midnight min-h-screen">
+      <main ref={containerRef} className="bg-forest min-h-screen">
 
         {/* Top amber+gold line */}
         <div className="h-[3px] bg-gradient-to-r from-amber via-gold to-amber opacity-70" />
 
         {/* Ticker */}
-        <div className="overflow-hidden border-b border-white/6 py-4">
+        <div className="overflow-hidden border-b border-white/10 py-4">
           <div className="flex whitespace-nowrap">
             <div ref={tickerRef} className="flex shrink-0 gap-12 pr-12">
               {IMPACT.ticker.map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="font-mono text-gold text-xs tracking-wider font-bold">{item.stat}</span>
-                  <span className="font-sans text-white/20 text-xs">{item.label}</span>
-                  <span className="text-white/10">·</span>
+                  <span className="font-sans text-white/35 text-xs">{item.label}</span>
+                  <span className="text-white/15">·</span>
                 </div>
               ))}
             </div>
@@ -83,7 +83,7 @@ export default function Impact() {
             <h1 className="font-sans font-extrabold text-white text-4xl md:text-6xl tracking-tight leading-[1.06] mb-4">
               {IMPACT.heading}
             </h1>
-            <p className="font-sans text-white/35 text-lg max-w-xl mx-auto">{IMPACT.subhead}</p>
+            <p className="font-sans text-white/45 text-lg max-w-xl mx-auto">{IMPACT.subhead}</p>
           </div>
 
           {/* Filter tabs */}
@@ -93,7 +93,7 @@ export default function Impact() {
                 className={`font-sans text-sm font-medium px-5 py-2 rounded-pill transition-all duration-200 ${
                   filter === f
                     ? 'bg-gold text-midnight font-bold'
-                    : 'border border-white/10 text-white/40 hover:text-white hover:border-white/25'
+                    : 'border border-white/10 text-white/40 hover:text-white hover:border-midnight/30'
                 }`}>
                 {f}
               </button>
@@ -101,7 +101,7 @@ export default function Impact() {
           </div>
 
           {/* Featured */}
-          <div className="impact-featured relative bg-slate-card rounded-4xl p-8 md:p-12 border border-white/6 overflow-hidden mb-8">
+          <div className="impact-featured relative bg-forest-card rounded-4xl p-8 md:p-12 border border-white/10 shadow-sm overflow-hidden mb-8">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
@@ -112,20 +112,20 @@ export default function Impact() {
                   "{IMPACT.featured.quote}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-midnight font-bold shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-gold flex items-center justify-center text-white font-bold shrink-0">
                     {IMPACT.featured.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
                     <p className="font-sans font-bold text-white">{IMPACT.featured.name}</p>
-                    <p className="font-sans text-white/35 text-sm">{IMPACT.featured.role}</p>
+                    <p className="font-sans text-white/45 text-sm">{IMPACT.featured.role}</p>
                   </div>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-4">
                 {IMPACT.featured.stats?.map((s, i) => (
-                  <div key={i} className="bg-midnight-lift rounded-3xl px-6 py-5 border border-white/6 flex-1">
+                  <div key={i} className="bg-forest-lift rounded-3xl px-6 py-5 border border-white/10 flex-1">
                     <div className="font-sans font-extrabold text-gold text-3xl mb-1">{s.value}</div>
-                    <div className="font-mono text-white/25 text-xs tracking-wider">{s.label}</div>
+                    <div className="font-mono text-white/35 text-xs tracking-wider">{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -138,7 +138,7 @@ export default function Impact() {
               <div key={i} className={`impact-card relative rounded-4xl p-6 border overflow-hidden ${
                 card.isCohort
                   ? 'bg-amber/8 border-amber/20'
-                  : 'bg-slate-card border-white/6'
+                  : 'bg-forest-card border-white/10 shadow-sm'
               }`}>
                 <div className={`absolute top-0 left-0 right-0 h-[2px] ${
                   card.isCohort
@@ -163,7 +163,7 @@ export default function Impact() {
                   ))}
                 </div>
 
-                <p className={`font-sans text-sm leading-relaxed mb-5 ${card.isCohort ? 'text-slate-mid' : 'text-white/55'}`}>
+                <p className="font-sans text-sm leading-relaxed mb-5 text-white/60">
                   "{card.quote}"
                 </p>
 
@@ -174,11 +174,11 @@ export default function Impact() {
                     {card.isCohort ? '✦' : card.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
-                    <p className={`font-sans font-semibold text-sm ${card.isCohort ? 'text-midnight' : 'text-white'}`}>
+                    <p className="font-sans font-semibold text-sm text-white">
                       {card.name}
                     </p>
                     <div className="flex items-center gap-2">
-                      <p className={`font-mono text-[10px] ${card.isCohort ? 'text-amber-muted' : 'text-white/25'}`}>
+                      <p className={`font-mono text-[10px] ${card.isCohort ? 'text-amber-muted' : 'text-white/35'}`}>
                         {card.result}
                       </p>
                     </div>
@@ -193,18 +193,18 @@ export default function Impact() {
             <div className="relative bg-amber/8 border border-amber/20 rounded-4xl p-8 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber to-transparent" />
               <p className="font-mono text-amber text-xs tracking-wider uppercase mb-3">For students</p>
-              <h3 className="font-sans font-extrabold text-midnight text-xl mb-3">The Launch Program</h3>
-              <p className="font-sans text-midnight/55 text-sm leading-relaxed mb-6">Free advising for high school and college students. No cost, no catch.</p>
+              <h3 className="font-sans font-extrabold text-white text-xl mb-3">The Launch Program</h3>
+              <p className="font-sans text-white/55 text-sm leading-relaxed mb-6">Free advising for high school and college students. No cost, no catch.</p>
               <Link to="/launch"
-                className="inline-flex items-center gap-2 bg-amber text-midnight font-sans font-bold text-sm px-6 py-3 rounded-pill hover:bg-amber-light transition-colors">
+                className="inline-flex items-center gap-2 bg-amber text-white font-sans font-bold text-sm px-6 py-3 rounded-pill hover:bg-amber-light transition-colors">
                 See services →
               </Link>
             </div>
-            <div className="relative bg-slate-card border border-white/6 rounded-4xl p-8 overflow-hidden">
+            <div className="relative bg-forest-card border border-white/10 shadow-sm rounded-4xl p-8 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
               <p className="font-mono text-gold text-xs tracking-wider uppercase mb-3">For professionals</p>
               <h3 className="font-sans font-extrabold text-white text-xl mb-3">Start with JBC Premium</h3>
-              <p className="font-sans text-white/40 text-sm leading-relaxed mb-6">Post-grad career coaching starting at $10. Book a free 15-min intake call.</p>
+              <p className="font-sans text-white/55 text-sm leading-relaxed mb-6">Post-grad career coaching starting at $10. Book a free 15-min intake call.</p>
               <Link to="/apply/premium"
                 className="inline-flex items-center gap-2 bg-gold text-midnight font-sans font-bold text-sm px-6 py-3 rounded-pill hover:bg-gold-light transition-colors">
                 Book free call →

@@ -75,10 +75,10 @@ export default function LaunchApply() {
     return (
       <div className="bg-amber/8 border border-amber/25 rounded-4xl p-10 text-center">
         <div className="w-14 h-14 rounded-full bg-amber flex items-center justify-center mx-auto mb-5">
-          <CheckCircle2 className="w-7 h-7 text-midnight" />
+          <CheckCircle2 className="w-7 h-7 text-white" />
         </div>
-        <h3 className="font-sans font-extrabold text-midnight text-2xl mb-3">Application received!</h3>
-        <p className="font-sans text-midnight/60 text-base leading-relaxed max-w-sm mx-auto">
+        <h3 className="font-sans font-extrabold text-white text-2xl mb-3">Application received!</h3>
+        <p className="font-sans text-white/60 text-base leading-relaxed max-w-sm mx-auto">
           I'll reach out to <strong>{form.email}</strong> within 48 hours to schedule your first session.
         </p>
         <div className="mt-6 font-mono text-amber text-xs tracking-wider">No commitment required · Free session</div>
@@ -87,15 +87,15 @@ export default function LaunchApply() {
   }
 
   return (
-    <div className="relative bg-off-white rounded-4xl p-8 border border-light-gray overflow-hidden">
+    <div className="relative bg-forest-lift rounded-4xl p-8 border border-white/10 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber to-transparent" />
 
       <div className="mb-8">
         <div className="inline-flex items-center gap-2 border border-amber/30 bg-amber/8 text-amber-muted rounded-pill px-4 py-1.5 mb-4">
           <span className="font-mono text-xs tracking-widest uppercase">{LAUNCH.apply.badge}</span>
         </div>
-        <h3 className="font-sans font-extrabold text-midnight text-2xl mb-2">{LAUNCH.apply.heading}</h3>
-        <p className="font-sans text-midnight/50 text-sm leading-relaxed">{LAUNCH.apply.sub}</p>
+        <h3 className="font-sans font-extrabold text-white text-2xl mb-2">{LAUNCH.apply.heading}</h3>
+        <p className="font-sans text-white/50 text-sm leading-relaxed">{LAUNCH.apply.sub}</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -103,32 +103,32 @@ export default function LaunchApply() {
         {/* Name + Email */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="font-mono text-[10px] tracking-widest uppercase text-midnight/40 mb-2 block">Full Name *</label>
+            <label className="font-mono text-[10px] tracking-widest uppercase text-white/40 mb-2 block">Full Name *</label>
             <input
               type="text" required value={form.name}
               onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
               placeholder="Your name"
-              className="w-full bg-white border border-light-gray rounded-2xl px-4 py-3 font-sans text-sm text-midnight placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors"
+              className="w-full bg-forest-card border border-white/10 rounded-2xl px-4 py-3 font-sans text-sm text-white placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors"
             />
           </div>
           <div>
-            <label className="font-mono text-[10px] tracking-widest uppercase text-midnight/40 mb-2 block">Email *</label>
+            <label className="font-mono text-[10px] tracking-widest uppercase text-white/40 mb-2 block">Email *</label>
             <input
               type="email" required value={form.email}
               onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
               placeholder="you@email.com"
-              className="w-full bg-white border border-light-gray rounded-2xl px-4 py-3 font-sans text-sm text-midnight placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors"
+              className="w-full bg-forest-card border border-white/10 rounded-2xl px-4 py-3 font-sans text-sm text-white placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors"
             />
           </div>
         </div>
 
         {/* Grade */}
         <div>
-          <label className="font-mono text-[10px] tracking-widest uppercase text-midnight/40 mb-2 block">Current Grade / Year *</label>
+          <label className="font-mono text-[10px] tracking-widest uppercase text-white/40 mb-2 block">Current Grade / Year *</label>
           <select
             required value={form.grade}
             onChange={e => setForm(f => ({ ...f, grade: e.target.value }))}
-            className="w-full bg-white border border-light-gray rounded-2xl px-4 py-3 font-sans text-sm text-midnight focus:outline-none focus:border-amber/60 transition-colors"
+            className="w-full bg-forest-card border border-white/10 rounded-2xl px-4 py-3 font-sans text-sm text-white focus:outline-none focus:border-amber/60 transition-colors"
           >
             <option value="">Select your grade or year</option>
             {GRADE_OPTIONS.map(g => <option key={g} value={g}>{g}</option>)}
@@ -137,7 +137,7 @@ export default function LaunchApply() {
 
         {/* Interests */}
         <div>
-          <label className="font-mono text-[10px] tracking-widest uppercase text-midnight/40 mb-3 block">
+          <label className="font-mono text-[10px] tracking-widest uppercase text-white/40 mb-3 block">
             Areas you need help with * (select all that apply)
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -147,14 +147,14 @@ export default function LaunchApply() {
                 onClick={() => toggleInterest(opt)}
                 className={`flex items-center gap-2.5 text-left px-4 py-3 rounded-2xl border text-sm font-sans transition-all duration-200 ${
                   form.interests.includes(opt)
-                    ? 'border-amber/60 bg-amber/10 text-midnight font-medium'
-                    : 'border-light-gray bg-white text-midnight/50 hover:border-amber/30'
+                    ? 'border-amber/60 bg-amber/10 text-white font-medium'
+                    : 'border-white/10 bg-forest-card text-white/50 hover:border-amber/30'
                 }`}
               >
                 <div className={`w-4 h-4 rounded border flex items-center justify-center shrink-0 ${
-                  form.interests.includes(opt) ? 'bg-amber border-amber' : 'border-light-gray'
+                  form.interests.includes(opt) ? 'bg-amber border-amber' : 'border-white/10'
                 }`}>
-                  {form.interests.includes(opt) && <span className="text-midnight text-[10px] font-bold">✓</span>}
+                  {form.interests.includes(opt) && <span className="text-white text-[10px] font-bold">✓</span>}
                 </div>
                 {opt}
               </button>
@@ -164,7 +164,7 @@ export default function LaunchApply() {
 
         {/* Goal */}
         <div>
-          <label className="font-mono text-[10px] tracking-widest uppercase text-midnight/40 mb-2 block">
+          <label className="font-mono text-[10px] tracking-widest uppercase text-white/40 mb-2 block">
             What's your biggest goal right now?
           </label>
           <textarea
@@ -172,18 +172,18 @@ export default function LaunchApply() {
             onChange={e => setForm(f => ({ ...f, goal: e.target.value }))}
             placeholder="e.g. I'm applying to colleges this fall and have no idea how to write my common app essay..."
             rows={3}
-            className="w-full bg-white border border-light-gray rounded-2xl px-4 py-3 font-sans text-sm text-midnight placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors resize-none"
+            className="w-full bg-forest-card border border-white/10 rounded-2xl px-4 py-3 font-sans text-sm text-white placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors resize-none"
           />
         </div>
 
         {/* How did you hear */}
         <div>
-          <label className="font-mono text-[10px] tracking-widest uppercase text-midnight/40 mb-2 block">How did you hear about us?</label>
+          <label className="font-mono text-[10px] tracking-widest uppercase text-white/40 mb-2 block">How did you hear about us?</label>
           <input
             type="text" value={form.heard}
             onChange={e => setForm(f => ({ ...f, heard: e.target.value }))}
             placeholder="Instagram, friend, Google..."
-            className="w-full bg-white border border-light-gray rounded-2xl px-4 py-3 font-sans text-sm text-midnight placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors"
+            className="w-full bg-forest-card border border-white/10 rounded-2xl px-4 py-3 font-sans text-sm text-white placeholder-midnight/25 focus:outline-none focus:border-amber/60 transition-colors"
           />
         </div>
 
@@ -193,7 +193,7 @@ export default function LaunchApply() {
 
         <button
           type="submit" disabled={submitting || form.interests.length === 0}
-          className="w-full flex items-center justify-center gap-2 bg-amber text-midnight font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center gap-2 bg-amber text-white font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed"
           style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
           onMouseEnter={(e) => { if (!e.currentTarget.disabled) e.currentTarget.style.transform = 'scale(1.02)' }}
           onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}
@@ -203,7 +203,7 @@ export default function LaunchApply() {
           {!submitting && <span className="relative opacity-60 text-sm">→</span>}
         </button>
 
-        <p className="font-mono text-[10px] text-midnight/25 text-center tracking-wider">
+        <p className="font-mono text-[10px] text-white/25 text-center tracking-wider">
           I'll respond within 48 hours · No commitment required
         </p>
       </form>

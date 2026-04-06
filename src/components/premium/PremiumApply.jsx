@@ -34,7 +34,7 @@ export default function PremiumApply() {
   }, [])
 
   return (
-    <section ref={containerRef} id="book" className="bg-slate-card pt-28 pb-20 px-6 relative overflow-hidden">
+    <section ref={containerRef} id="book" className="bg-forest-lift pt-28 pb-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.025]"
         style={{
           backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)',
@@ -52,7 +52,7 @@ export default function PremiumApply() {
               {booking.heading1}<br />
               <span className="text-gold-shimmer">{booking.heading2}</span>
             </h2>
-            <p className="font-sans text-white/45 text-base leading-relaxed mb-10 max-w-md">
+            <p className="font-sans text-white/55 text-base leading-relaxed mb-10 max-w-md">
               {booking.sub}
             </p>
             <ul className="space-y-4 mb-10">
@@ -63,14 +63,14 @@ export default function PremiumApply() {
                 </li>
               ))}
             </ul>
-            <div className="flex gap-6 pt-6 border-t border-white/8">
+            <div className="flex gap-6 pt-6 border-t border-white/10">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center">
                   <Calendar className="w-4 h-4 text-gold" />
                 </div>
                 <div>
                   <div className="font-sans font-bold text-white text-sm">{booking.sessionLabel}</div>
-                  <div className="font-mono text-white/30 text-xs">{booking.sessionSub}</div>
+                  <div className="font-mono text-white/35 text-xs">{booking.sessionSub}</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -79,7 +79,7 @@ export default function PremiumApply() {
                 </div>
                 <div>
                   <div className="font-sans font-bold text-white text-sm">{booking.flexLabel}</div>
-                  <div className="font-mono text-white/30 text-xs">{booking.flexSub}</div>
+                  <div className="font-mono text-white/35 text-xs">{booking.flexSub}</div>
                 </div>
               </div>
             </div>

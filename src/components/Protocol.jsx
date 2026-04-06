@@ -114,17 +114,17 @@ const CARDS = [
   {
     num: '01', title: 'Diagnose',
     desc: 'We audit your resume, LinkedIn, and job search approach against ATS systems and real recruiter behavior patterns. Every gap gets a name.',
-    bg: 'bg-jet', Canvas: ParticleCanvas,
+    bg: 'bg-forest', Canvas: ParticleCanvas,
   },
   {
     num: '02', title: 'Engineer',
     desc: 'Every word chosen for signal-to-noise ratio. Every section placed for recruiter eye-tracking. Built to pass machines and impress humans.',
-    bg: 'bg-charcoal', Canvas: WaveCanvas,
+    bg: 'bg-forest', Canvas: WaveCanvas,
   },
   {
     num: '03', title: 'Execute',
     desc: "A weekly application protocol, follow-up cadence, and offer negotiation playbook. You don't just apply - you campaign.",
-    bg: 'bg-dark-mid', Canvas: GanttCanvas,
+    bg: 'bg-forest-lift', Canvas: GanttCanvas,
   },
 ]
 
@@ -184,7 +184,7 @@ export default function Protocol() {
               style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)' }}>
               {card.title}<span className="text-gold">.</span>
             </h2>
-            <p className={`proto-desc-${i} font-sans text-white/45 text-base md:text-lg max-w-2xl leading-relaxed`}>
+            <p className={`proto-desc-${i} font-sans text-white/55 text-base md:text-lg max-w-2xl leading-relaxed`}>
               {card.desc}
             </p>
           </div>

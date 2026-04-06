@@ -26,16 +26,16 @@ function DiagnosticMini() {
   }, [])
   const s = SCORE_STATES[idx]
   return (
-    <div ref={ref} className="bg-jet rounded-2xl p-4 border border-white/8">
+    <div ref={ref} className="bg-forest-lift rounded-2xl p-4 border border-white/10">
       <div className="flex items-center justify-between mb-3">
-        <span className="font-mono text-[10px] text-white/30 tracking-widest uppercase">{s.label}</span>
+        <span className="font-mono text-[10px] text-white/40 tracking-widest uppercase">{s.label}</span>
         <span className="font-mono text-[10px] px-2 py-0.5 rounded-pill border" style={{ color: s.bar, borderColor: s.bar + '40' }}>{s.verdict}</span>
       </div>
       <div className="flex items-end gap-2 mb-3">
         <span className="font-sans font-extrabold text-white text-4xl leading-none">{s.value}</span>
-        <span className="font-mono text-white/20 mb-1">/ 100</span>
+        <span className="font-mono text-white/30 mb-1">/ 100</span>
       </div>
-      <div className="h-1 bg-white/8 rounded-full overflow-hidden">
+      <div className="h-1 bg-midnight/10 rounded-full overflow-hidden">
         <div className="h-full rounded-full transition-all duration-700" style={{ width: `${s.value}%`, backgroundColor: s.bar }} />
       </div>
     </div>
@@ -70,8 +70,8 @@ function TypewriterMini() {
     return () => clearTimeout(t)
   }, [cIdx, mIdx])
   return (
-    <div className="bg-jet rounded-2xl p-4 border border-white/8 font-mono text-xs min-h-[90px]">
-      {lines.map((l, i) => <div key={i} className="text-white/20 leading-loose">{l}</div>)}
+    <div className="bg-forest-lift rounded-2xl p-4 border border-white/10 font-mono text-xs min-h-[90px]">
+      {lines.map((l, i) => <div key={i} className="text-white/35 leading-loose">{l}</div>)}
       <div className="text-gold/80 leading-loose">
         {MSGS[mIdx].slice(0, cIdx)}
         <span className="inline-block w-[4px] h-3 bg-gold ml-0.5 align-middle animate-blink" />
@@ -111,9 +111,9 @@ function SchedulerMini() {
     return () => clearTimeout(t)
   }, [])
   return (
-    <div className="bg-jet rounded-2xl p-4 border border-white/8">
+    <div className="bg-forest-lift rounded-2xl p-4 border border-white/10">
       <div className="grid grid-cols-5 gap-0.5 mb-1">
-        {DAYS_LABEL.map((d,i) => <div key={i} className="text-center font-mono text-[9px] text-white/20">{d}</div>)}
+        {DAYS_LABEL.map((d,i) => <div key={i} className="text-center font-mono text-[9px] text-white/30">{d}</div>)}
       </div>
       <div className="grid grid-cols-5 gap-1">
         {cells.map((s, i) => (
@@ -129,7 +129,7 @@ function SchedulerMini() {
         {Object.entries(CELL_COLORS).map(([k,c]) => (
           <span key={k} className="flex items-center gap-1">
             <span className="w-1.5 h-1.5 rounded-sm" style={{backgroundColor:c}} />
-            <span className="font-mono text-[9px] text-white/25 capitalize">{k}</span>
+            <span className="font-mono text-[9px] text-white/35 capitalize">{k}</span>
           </span>
         ))}
       </div>
@@ -217,16 +217,16 @@ export default function Features() {
   }, [])
 
   return (
-    <section ref={containerRef} id="services" className="bg-off-white py-28 px-6">
+    <section ref={containerRef} id="services" className="bg-forest py-28 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Section header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6">
           <div>
             <p className="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4">// Services</p>
-            <h2 className="font-serif italic text-jet text-5xl md:text-7xl leading-none">What We Do.</h2>
+            <h2 className="font-serif italic text-white text-5xl md:text-7xl leading-none">What We Do.</h2>
           </div>
-          <p className="font-sans text-slate-mid text-sm max-w-xs leading-relaxed md:text-right">
+          <p className="font-sans text-white/50 text-sm max-w-xs leading-relaxed md:text-right">
             Three precision services. One outcome: the job you actually want.
           </p>
         </div>
@@ -236,7 +236,7 @@ export default function Features() {
           {SERVICES.map((svc, i) => (
             <div
               key={i}
-              className="svc-card bg-charcoal rounded-4xl overflow-hidden flex flex-col relative group"
+              className="svc-card bg-forest-card rounded-4xl overflow-hidden flex flex-col relative group border border-white/10 shadow-sm"
               style={{ boxShadow: `0 0 60px ${svc.accentGlow}` }}
             >
               {/* Gold top accent line */}
@@ -256,7 +256,7 @@ export default function Features() {
                 <p className="font-serif italic text-gold text-base mb-5">{svc.tagline}</p>
 
                 {/* Description */}
-                <p className="font-sans text-white/45 text-sm leading-relaxed mb-6">
+                <p className="font-sans text-white/55 text-sm leading-relaxed mb-6">
                   {svc.description}
                 </p>
 
@@ -272,7 +272,7 @@ export default function Features() {
                     {svc.includes.map((item, j) => (
                       <li key={j} className="flex items-start gap-2.5">
                         <Check className="w-3.5 h-3.5 text-gold mt-0.5 shrink-0" />
-                        <span className="font-sans text-white/55 text-xs leading-relaxed">{item}</span>
+                        <span className="font-sans text-white/60 text-xs leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -286,7 +286,7 @@ export default function Features() {
                 {/* CTA */}
                 <a
                   href="#book"
-                  className="mt-auto flex items-center justify-between font-sans font-semibold text-sm text-white/50 hover:text-gold transition-colors duration-200 group/link"
+                  className="mt-auto flex items-center justify-between font-sans font-semibold text-sm text-white/45 hover:text-gold transition-colors duration-200 group/link"
                 >
                   <span>Get Started</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1" />
@@ -297,8 +297,8 @@ export default function Features() {
         </div>
 
         {/* Bottom strip - comparison note */}
-        <div className="mt-12 bg-charcoal rounded-3xl px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 border border-white/5">
-          <p className="font-sans text-white/40 text-sm text-center md:text-left">
+        <div className="mt-12 bg-forest-card rounded-3xl px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 border border-white/10">
+          <p className="font-sans text-white/50 text-sm text-center md:text-left">
             Need everything? The <span className="text-gold font-semibold">Full Package</span> combines all three services at a significant discount.
           </p>
           <a href="#pricing"

@@ -38,16 +38,16 @@ export default function HowItWorks() {
   }, [])
 
   return (
-    <section ref={containerRef} id="services" className="bg-off-white py-28 px-6 overflow-hidden">
+    <section ref={containerRef} id="services" className="bg-forest-lift py-28 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-20 gap-6">
           <div>
             <p className="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4">// {howItWorks.label}</p>
-            <h2 className="font-serif italic text-jet text-5xl md:text-7xl leading-none">{howItWorks.heading}</h2>
+            <h2 className="font-serif italic text-white text-5xl md:text-7xl leading-none">{howItWorks.heading}</h2>
           </div>
-          <p className="font-sans text-slate-mid text-sm max-w-xs leading-relaxed md:text-right">
+          <p className="font-sans text-white/50 text-sm max-w-xs leading-relaxed md:text-right">
             {howItWorks.subhead}
           </p>
         </div>
@@ -103,9 +103,9 @@ export default function HowItWorks() {
               {/* Right: content */}
               <div className="pb-8 flex-1">
                 <span className="font-mono text-gold/40 text-xs tracking-widest block mb-1">{step.num}</span>
-                <h3 className="font-sans font-extrabold text-jet text-lg mb-1">{step.title}</h3>
+                <h3 className="font-sans font-extrabold text-white text-lg mb-1">{step.title}</h3>
                 <p className="font-serif italic text-gold text-sm mb-3">{step.headline}</p>
-                <p className="font-sans text-slate-mid text-sm leading-relaxed mb-3">{step.body}</p>
+                <p className="font-sans text-white/50 text-sm leading-relaxed mb-3">{step.body}</p>
                 <p className="font-mono text-slate-light text-[10px] tracking-wide">{step.detail}</p>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function HowItWorks() {
               {howItWorks.ctaSecondary}
             </a>
             <a href="#book"
-              className="font-sans font-bold text-sm text-jet bg-gold px-5 py-3 rounded-pill overflow-hidden relative group"
+              className="font-sans font-bold text-sm text-white bg-gold px-5 py-3 rounded-pill overflow-hidden relative group"
               style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
               onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)' }}
               onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}>

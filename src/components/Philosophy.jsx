@@ -47,7 +47,7 @@ export default function Philosophy() {
   }, [])
 
   return (
-    <section ref={containerRef} id="about" className="relative bg-jet overflow-hidden py-32 px-6">
+    <section ref={containerRef} id="about" className="relative bg-forest overflow-hidden py-32 px-6">
       {/* Subtle geometric grid */}
       <div className="absolute inset-0 opacity-[0.025]"
         style={{
@@ -68,18 +68,18 @@ export default function Philosophy() {
           <div key={i} className={`phil-pair-${i}`}>
             <div className="mb-20">
               <p className={`phil-serif-${i} font-serif italic leading-tight mb-4 text-4xl md:text-6xl ${
-                s.accent ? 'text-white' : 'text-white/45'
+                s.accent ? 'text-midnight' : 'text-white/45'
               }`}>
                 {s.serif}
               </p>
               <p className={`phil-mono-${i} font-mono text-sm md:text-base ${
-                s.accent ? 'text-gold' : 'text-white/20'
+                s.accent ? 'text-gold-muted' : 'text-white/30'
               }`}>
                 {s.mono}
               </p>
             </div>
             {i < STATEMENTS.length - 1 && (
-              <div className="border-t border-white/6 mb-20" />
+              <div className="border-t border-white/10 mb-20" />
             )}
           </div>
         ))}

@@ -1,0 +1,5 @@
+export { default as PreviewColorA } from './ColorPreviewA'
+export { default as PreviewColorB } from './ColorPreviewB'
+export { default as PreviewColorC } from './ColorPreviewC'
+export { default as PreviewColorD } from './ColorPreviewD'
+export { default as PreviewColorE } from './ColorPreviewE'

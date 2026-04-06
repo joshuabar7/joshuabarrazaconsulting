@@ -130,7 +130,7 @@ export default function Testimonials() {
             <div className="flex items-center justify-between gap-4 pt-7 border-t border-white/8">
               <div className="flex items-center gap-4">
                 <div
-                  className="w-11 h-11 rounded-full flex items-center justify-center font-mono font-bold text-jet text-xs shrink-0"
+                  className="w-11 h-11 rounded-full flex items-center justify-center font-mono font-bold text-white text-xs shrink-0"
                   style={{ backgroundColor: FEATURED.avatarColor }}
                 >
                   {FEATURED.avatar}
@@ -168,7 +168,7 @@ export default function Testimonials() {
                 <div className="flex items-center justify-between gap-3 pt-5 border-t border-white/8">
                   <div className="flex items-center gap-3">
                     <div
-                      className="w-9 h-9 rounded-full flex items-center justify-center font-mono font-bold text-jet text-[10px] shrink-0"
+                      className="w-9 h-9 rounded-full flex items-center justify-center font-mono font-bold text-white text-[10px] shrink-0"
                       style={{ backgroundColor: t.avatarColor }}
                     >
                       {t.avatar}
@@ -215,7 +215,7 @@ export default function Testimonials() {
         <div className="text-center">
           <p className="font-sans text-white/30 mb-6 text-sm">Ready to add your name to this list?</p>
           <a href="#book"
-            className="inline-flex items-center gap-2 bg-gold text-jet font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
+            className="inline-flex items-center gap-2 bg-gold text-midnight font-sans font-bold px-8 py-4 rounded-pill overflow-hidden relative group"
             style={{ transition: 'transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94)' }}
             onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)' }}
             onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)' }}>

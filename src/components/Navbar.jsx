@@ -30,9 +30,14 @@ export default function Navbar() {
       <div
         className={`navbar-inner flex items-center justify-between w-full max-w-6xl px-6 py-3 rounded-pill transition-all duration-500 ${
           scrolled
-            ? 'bg-ivory/95 backdrop-blur-xl border border-light-gray shadow-lg shadow-jet/8'
-            : 'bg-jet/70 backdrop-blur-md border border-white/8'
+            ? 'backdrop-blur-xl shadow-lg'
+            : 'backdrop-blur-md'
         }`}
+        style={{
+          background: scrolled ? 'rgba(10,26,16,0.97)' : 'rgba(10,26,16,0.82)',
+          border: '1px solid rgba(255,255,255,0.09)',
+          boxShadow: scrolled ? '0 4px 32px rgba(0,0,0,0.3)' : undefined,
+        }}
       >
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 shrink-0">
@@ -42,7 +47,7 @@ export default function Navbar() {
               style={{ height: '200%', objectFit: 'cover', objectPosition: 'center 5%', marginTop: 0 }}
             />
           </div>
-          <span className={`font-serif italic text-3xl ${scrolled ? 'text-jet' : 'text-white'}`}>
+          <span className="font-serif italic text-3xl text-white">
             {nav.logo}
           </span>
         </Link>
@@ -64,14 +69,11 @@ export default function Navbar() {
             return (
               <Link key={label} to={href}
                 className={`font-sans text-sm font-medium px-4 py-2 rounded-pill transition-all duration-200 hover:-translate-y-px ${
-                  scrolled
-                    ? active
-                      ? 'text-jet bg-light-gray/80 font-semibold'
-                      : 'text-slate-mid hover:text-jet hover:bg-light-gray/60'
-                    : active
-                      ? 'text-white bg-white/12 font-semibold'
-                      : 'text-white/60 hover:text-white hover:bg-white/8'
-                }`}>
+                  active
+                    ? 'text-white font-semibold'
+                    : 'hover:-translate-y-px'
+                }`}
+                style={{ color: active ? '#fff' : 'rgba(255,255,255,0.5)', background: active ? 'rgba(255,255,255,0.10)' : undefined }}>
                 {label}
               </Link>
             )
@@ -85,7 +87,7 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           {[0,1,2].map(i => (
-            <span key={i} className={`block w-5 h-px transition-all duration-300 ${scrolled ? 'bg-jet' : 'bg-white'} ${
+            <span key={i} className={`block w-5 h-px transition-all duration-300 bg-white ${
               i===0 && menuOpen ? 'rotate-45 translate-y-2' :
               i===1 && menuOpen ? 'opacity-0' :
               i===2 && menuOpen ? '-rotate-45 -translate-y-2' : ''
@@ -96,15 +98,16 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-full left-4 right-4 mt-2 bg-ivory rounded-3xl p-6 border border-light-gray shadow-xl md:hidden">
+        <div className="absolute top-full left-4 right-4 mt-2 rounded-3xl p-6 shadow-xl md:hidden" style={{ background:'rgba(10,26,16,0.97)', border:'1px solid rgba(255,255,255,0.10)', backdropFilter:'blur(20px)' }}>
           <div className="flex flex-col gap-2">
             {nav.links.map(({ label, href, isCTA }) => (
               <Link key={label} to={href} onClick={() => setMenuOpen(false)}
                 className={isCTA
-                  ? 'bg-gold text-jet font-sans font-bold text-sm px-5 py-3.5 rounded-pill text-center mt-2'
+                  ? 'bg-gold text-midnight font-sans font-bold text-sm px-5 py-3.5 rounded-pill text-center mt-2'
                   : `font-sans text-sm font-medium px-4 py-3 rounded-2xl transition-all ${
-                      isActive(href) ? 'text-jet bg-off-white font-semibold' : 'text-slate-mid hover:text-jet hover:bg-off-white'
-                    }`
+                      isActive(href) ? 'text-white font-semibold' : ''
+                    }`}
+                style={!isCTA ? { color: isActive(href) ? '#fff' : 'rgba(255,255,255,0.55)', background: isActive(href) ? 'rgba(255,255,255,0.10)' : undefined } : undefined
                 }>
                 {label}
               </Link>
